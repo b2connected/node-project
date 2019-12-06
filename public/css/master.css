@@ -1,0 +1,339 @@
+html, body {
+    height: 100%;
+}
+
+.jumbotron{
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
+*{
+  outline: none;
+}
+body{
+  color:#0C2E2B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+
+}
+header, footer{
+  display:block;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+a:hover{
+  text-decoration:underline;
+}
+ul{
+  list-style-type: none;
+  padding:0;
+}
+h1{
+  color:rgb(41, 129, 88);
+  text-align:center;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+h2{
+  text-align:center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+h3{
+  margin: 0;
+  color:#ffffff;
+  font-weight: bolder;
+  padding: 5px 15px;
+}
+h4{
+  margin: 0;
+}
+textarea, input{
+  padding: 3px 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+footer{
+  text-align:center;
+  padding: 10px 0;
+}
+.ellipsis{
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.float_left{
+  float:left;
+  margin-right:10px;
+}
+.float_right{
+  float:right;
+  margin-left:10px;
+}
+.message{
+  display: block;
+  clear: both;
+  color: rgb(223, 15, 0);
+}
+.searchHighligt {
+  background-color: yellow;
+}
+table{
+  background-color: rgba( 255, 255, 255, 0.5 );
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+}
+table tr{
+  border-bottom: 1px solid #ccc;
+}
+table td, th{
+  padding: 7px 5px;
+}
+table .num{
+  width: 40px;
+  padding-left: 15px;
+}
+table .title{
+  word-break: break-all;
+}
+table .views {
+  width: 40px;
+}
+table .date {
+  width: 80px;
+  padding-right: 15px;
+}
+table .author {
+  width: 100px;
+}
+table thead tr{
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
+table tbody tr:nth-child(odd){
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
+table tbody tr.noData td{
+  background-color: rgba( 255, 255, 255, 0.5 );
+  text-align: center;
+}
+table tbody td{
+  text-align: center;
+}
+table tbody td.title{
+  text-align: left;
+}
+table tbody td a{
+  display: inline-block;
+  width: 100%;
+}
+.floats:after{
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.inputs{
+  padding: 5px 15px;
+  border-bottom: 1px solid #ccc;
+}
+.inputs label{
+  float:left;
+  min-width: 70px;
+  padding: 3px 0;
+  line-height: 20px;
+  margin: 3px 0;
+  
+}
+.inputs input{
+  float:right;
+  width: 180px;
+  height: 20px;
+  margin: 3px 0;
+}
+.inputs textarea{
+  float:right;
+  resize: vertical;
+  width: 245px;
+  margin: 3px 0;
+  height: 100px;
+}
+.inputs p{
+  margin: 0;
+}
+.buttons{
+  padding: 0 5px;
+  margin: 7px 0;
+}
+.buttons:after{
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.button{
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  min-width: 55px;
+  color: #165751;
+  border: 1px solid #ccc;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color:#f5f5f5;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.button:hover{
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+  left: 1px;
+  border: 1px solid #ccc;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+.button[disabled]{
+  color: #999 !important;
+}
+.button[disabled]:hover{
+  top: 0 !important;
+  left: 0 !important;
+  border: 1px solid #ccc !important;
+  border-right: 1px solid #aaa !important;
+  border-bottom: 1px solid #aaa !important;
+}
+.pagination{
+  text-align: center;
+}
+.pagination li{
+  display: inline;
+}
+
+.login,
+.users
+{
+  background-color: rgba( 255, 255, 255, 0.5 );
+  width: 300px;
+  margin: 0 auto;
+  
+}
+.posts .index {
+  background-color: rgba( 255, 255, 255, 0.5 );
+  width: 650px;
+  margin: 0 auto;
+}
+.posts .show{
+  width: 650px;
+  margin: 0 auto;
+
+}
+.white {
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
+.posts .show h3{
+  word-break: break-all;
+}
+.posts .new,
+.posts .edit{
+  width: 500px;
+  margin: 0 auto;
+}
+.posts .inputs input{
+  width: 380px;
+}
+.posts .inputs textarea{
+  width: 380px;
+}
+.posts .index .counter{
+  padding-left: 10px;
+}
+.posts .index .search{
+  height:40px;
+}
+.posts .index .search select{
+  float: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: white;
+  padding: 0px 3px;
+  width: 90px;
+  height: 19px;
+}
+.posts .index .search input[type='text']{
+  float: left;
+  margin-left: 2px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: white;
+  padding: 1px 3px;
+  width: 120px;
+  height: 15px;
+}
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+.posts .index .search .button{
+  float: left;
+  color: #714d4d;
+  padding: 2px;
+  margin-left: 2px;
+}
+.posts .show .content{
+  padding: 6px 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+.posts .show .body{
+  white-space:pre-line;
+}
+.posts .show .info{
+  font-size: 11px;
+  margin:5px;
+  padding: 5px 10px;
+  background-color: #E4E4E4;
+  border: 0 solid black;
+  border-radius: 5px;
+}
+.posts .show .info>div{
+  padding: 5px 0 ;
+  border-top: 1px dotted #999;
+}
+.posts .show .info>div:first-child{
+  border: none;
+}
+.posts .show .info .timestamp span{
+  display: inline-block;
+  width: 47px;
+}
+.posts .show .info .timestamp .updatedAt{
+  margin-top: 5px;
+}
+.hit {
+  animation-name: blink;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  /* 위 속성들을 한 줄로 표기하기 */
+  /* -webkit-animation: blink 1.5s ease infinite; */
+}
+ 
+/* 애니메이션 지점 설정하기 */
+/* 익스플로러 10 이상, 최신 모던 브라우저에서 지원 */
+@keyframes blink {
+  from {color: white;}
+  30% {color: yellow;}
+  to {color: red; font-weight: bold;}
+  /* 0% {color:white;}
+  30% {color: yellow;}
+  100% {color:red; font-weight: bold;} */
+}
