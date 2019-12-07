@@ -9,6 +9,23 @@ var cookieParser   = require('cookie-parser');
 var methodOverride = require('method-override');
 var passport = require('./config/passport');
 
+// var multer  =   require('multer');
+// var fs = require('fs')
+// var crypto = require('crypto');
+
+// // upload
+// var storage = multer.diskStorage({
+//   // folder upload
+//   destination: 'public/upload/',
+//   filename: function (req, file, cb) {
+//     crypto.pseudoRandomBytes(16, function (err, raw) {
+//       if (err) return cb(err)
+//       cb(null, Math.floor(Math.random()*9000000000) + 1000000000 + path.extname(file.originalname))
+//     })
+//   }
+// })
+// var upload = multer({ storage: storage });
+
 // DB setting
 mongoose.connect(
   "mongodb+srv://node-board:" +
@@ -60,6 +77,38 @@ app.use(passport.session());
 app.use('/', require('./routes/home'));
 app.use('/users', require('./routes/users'));
 app.use('/posts', checkQuery, require('./routes/posts'));
+
+// app.get('/files', function (req, res) {
+//   const images = fs.readdirSync('public/upload')
+//   var sorted = []
+//   for (let item of images){
+//       if(item.split('.').pop() === 'png'
+//       || item.split('.').pop() === 'jpg'
+//       || item.split('.').pop() === 'jpeg'
+//       || item.split('.').pop() === 'svg'){
+//           var abc = {
+//                 "image" : "/upload/"+item,
+//                 "folder" : '/'
+//           }
+//           sorted.push(abc)
+//       }
+//   }
+//   res.send(sorted);
+// })
+
+// app.post('/upload', upload.array('flFileUpload', 12), function (req, res, next) {
+//     res.redirect('back')
+// });
+
+app.post('/delete_file', function(req, res, next){
+  var url_del = 'public' + req.body.url_del
+  console.log(url_del)
+  if(fs.existsSync(url_del)){
+    fs.unlinkSync(url_del)
+  }
+  res.redirect('back')
+});
+
 
 // start server
 var port = process.env.PORT || 3000;

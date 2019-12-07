@@ -2,9 +2,11 @@
 <html>
   <head>
     <% include ../partials/head %>
+    <!-- <script src="../../public/ckeditor/ckeditor.js"></script> -->
   </head>
   <body style="background-image: url('../img/food.jpg'); background-repeat: no-repeat; background-size: 100%; background-position: left top;">
     <% include ../partials/nav %>
+    <div class ="white">
     <div class="posts">
 <!-- main start-->
 
@@ -27,6 +29,14 @@
       </div>
       <div class="floats">
         <label>Body</label>
+        <!-- <form>
+            <script type="text/javascript">
+              CKEDITOR.replace('description', {
+                "extraPlugins" : 'imagebrowser',
+                "imageBrowser_listUrl" : "/files"
+              });
+            </script>
+      </form> -->
         <textarea class="cvRequired" name="post[body]" cvRqErrMsg="Body is required." cvRqErrTo="#cvErrBody"></textarea>
         <div id="cvErrBody" class="message"></div>
       </div>
@@ -39,5 +49,6 @@
 
 <!-- main end -->
     </div><!--posts end -->
+  </div>
   </body>
 </html>

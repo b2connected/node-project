@@ -6,6 +6,7 @@ var Counter  = require('../models/Counter');
 var async    = require('async');
 var User     = require('../models/User');
 
+
 // index
 router.get('/', function(req,res){
   var vistorCounter = null;

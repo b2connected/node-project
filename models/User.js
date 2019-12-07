@@ -17,6 +17,10 @@ var userSchema = mongoose.Schema({
   password:{
     type:String,
     required:[true,"Password is required!"],
+  },
+  createdAt: {
+    type:Date, 
+    default:Date.now
   }
 });
 

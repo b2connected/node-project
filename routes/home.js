@@ -30,7 +30,7 @@ router.post('/login', passport.authenticate('local-login', {
 // Get logout
 router.get('/logout', function(req, res) {
   req.logout();
-  req.flash("postsMessage", "Good-bye, have a nice day!");
+  req.flash("postsMessage", "좋은 하루 보내세요");
   res.redirect('/');
 });
 
